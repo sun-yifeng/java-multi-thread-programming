@@ -11,7 +11,7 @@ package ch03;
  * @author: sunyf
  * @create: 2018-11-21 14:39
  **/
-public class JoinDemo extends Thread {
+public class JoinInterruptDemo extends Thread {
 
     @Override
     public void run() {
@@ -28,7 +28,7 @@ public class JoinDemo extends Thread {
     public static void main(String[] args) {
         try {
 
-            JoinDemo myThread = new JoinDemo();
+            JoinInterruptDemo myThread = new JoinInterruptDemo();
             myThread.setName("我要开始休眠了");
             myThread.start();
             // 线程对象执行完
