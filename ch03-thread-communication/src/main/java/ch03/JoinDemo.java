@@ -3,6 +3,11 @@ package ch03;
 /**
  * @program: java-multi-thread-programming
  * @description: join方法
+ *
+ * 1、join方法的作用是使用线程对象x执行run方法中的任务，而使当前线程无限期的阻塞，直到x执行完run()方法后面的代码；
+ * 2、join方法有使线程排队的作用，类似同步（synchronized）的效果；
+ * 3、join与synchronized的区别：join内部使用wait方法(wait内部也是用synchronized)，而synchronized使用的是对象监视器同步；
+ *
  * @author: sunyf
  * @create: 2018-11-21 14:39
  **/
@@ -35,6 +40,9 @@ public class JoinDemo extends Thread {
         System.out.println("我想myThread执行完之后，我再执行! 但是myThread要执行多长时间，不知道！");
     }
 
-
-
 }
+
+/** out
+ 休眠随机数：9144
+ 我想myThread执行完之后，我再执行! 但是myThread要执行多长时间，不知道！
+ * */
