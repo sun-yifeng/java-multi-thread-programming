@@ -11,7 +11,7 @@ package ch03;
  * @author: sunyf
  * @create: 2018-11-21 15:06
  **/
-public class JoinException  {
+public class JoinExceptionDemo {
 
     // 线程A：长任务
     public class ThreadA extends Thread {
@@ -81,7 +81,7 @@ public class JoinException  {
     }
 
     public static void main(String[] args) {
-        new JoinException().test();
+        new JoinExceptionDemo().test();
     }
 
 
@@ -93,6 +93,6 @@ public class JoinException  {
  at java.lang.Object.wait(Native Method)
  at java.lang.Thread.join(Thread.java:1245)
  at java.lang.Thread.join(Thread.java:1319)
- at ch03.JoinException$ThreadB.run(JoinException.java:39)
+ at ch03.JoinExceptionDemo$ThreadB.run(JoinExceptionDemo.java:39)
  线程A执行完成！
  */
