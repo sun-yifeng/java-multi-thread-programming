@@ -8,9 +8,11 @@ package com.sunyf.ch02;
  **/
 public class MultiLockDemo {
 
-    //
+    // 任务
     public class PrivateNum {
+        // 共享变量
         private int num = 0;
+        // 同步的方法
         synchronized public void addInt(String username) {
             try {
                 if ("a".equals(username)) {
@@ -19,9 +21,9 @@ public class MultiLockDemo {
                     Thread.sleep(2000);
                 } else {
                     num = 200;
-                    System.out.println("b set over");
+                    System.out.println("b set over!");
                 }
-                // 打印数字
+                // 打印结果(出现不同步的情况)
                 System.out.println(username + " num = " + num);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -78,3 +80,10 @@ public class MultiLockDemo {
     }
 
 }
+
+/*** out
+ a set over!
+ b set over!
+ b num = 200
+ a num = 100
+ */
