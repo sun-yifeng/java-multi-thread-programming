@@ -11,7 +11,7 @@ public class MultiLockDemo {
     // 任务
     public class PrivateNum {
         // 共享变量
-        private int num = 0;
+        private volatile int num = 0;
         // 同步的方法
         synchronized public void addInt(String username) {
             try {
