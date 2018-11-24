@@ -43,7 +43,7 @@ public class NotifyWhileLoopDemo {
                 for (int i = 0; i < 10; i++) {
                     mylist.add();
                     System.out.println("添加了" + (i + 1) + "个元素");
-                    Thread.sleep(3000);
+                    Thread.sleep(2000);
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -68,6 +68,7 @@ public class NotifyWhileLoopDemo {
                         System.out.println("线程B要退出了");
                         throw new InterruptedException();
                     }
+                    Thread.sleep(1000);
                     System.out.println("list's size:" + mylist.size());
                 }
             } catch (InterruptedException e) {
