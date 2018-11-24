@@ -16,6 +16,7 @@ public class JoinInterruptDemo extends Thread {
     @Override
     public void run() {
         try {
+            // 休眠随机时间的线程体
             int secondValue = (int) (Math.random() * 10000);
             System.out.println("休眠随机数：" + secondValue);
             Thread.sleep(secondValue);
@@ -27,11 +28,11 @@ public class JoinInterruptDemo extends Thread {
 
     public static void main(String[] args) {
         try {
-
+            // 创建一线程
             JoinInterruptDemo myThread = new JoinInterruptDemo();
             myThread.setName("我要开始休眠了");
             myThread.start();
-            // 线程对象执行完
+            // TODO main线程要等到myThread线程执行完
             myThread.join();
         } catch (InterruptedException e) {
             e.printStackTrace();

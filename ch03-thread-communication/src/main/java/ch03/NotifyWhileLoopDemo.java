@@ -28,7 +28,8 @@ public class NotifyWhileLoopDemo {
         }
     }
 
-    //
+    //hjmc f
+
     public class ThreadA extends Thread {
         private Mylist mylist;
 
