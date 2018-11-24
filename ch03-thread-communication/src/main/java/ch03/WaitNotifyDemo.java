@@ -20,7 +20,7 @@ public class WaitNotifyDemo {
         @Override
         public void run() {
             try {
-                synchronized (lock) {
+                synchronized (lock) { // TODO 对象锁
                     System.out.println("开始wait,time:" + System.currentTimeMillis());
                     lock.wait(); // 等待
                     System.out.println("结束wait,time:" + System.currentTimeMillis());
@@ -43,7 +43,7 @@ public class WaitNotifyDemo {
 
         @Override
         public void run() {
-            synchronized (lock) {
+            synchronized (lock) { // TODO 对象锁
                 System.out.println("开始notify,time:" + System.currentTimeMillis());
                 lock.notify();
                 System.out.println("要等到notify()方法内的代码完成之后，就是退出synchronized代码块之后，当前线程才释放");
