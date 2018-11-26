@@ -9,6 +9,7 @@
         <module name="ch01-java-multi-thread" />
         <module name="ch02-race-condition" />
         <module name="ch03-thread-communication" />
+        <module name="ch04-reentrant-lock" />
       </profile>
     </annotationProcessing>
   </component>

@@ -12,6 +12,7 @@
     <module>ch03-thread-communication</module>
     <module>ch01-java-multi-thread</module>
       <module>ch02-race-condition</module>
+      <module>ch04-reentrant-lock</module>
   </modules>
 
   <name>java-multi-thread-programming</name>
